@@ -11,6 +11,19 @@ const twoSum = (array, target) => {
 const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(twoSum(myArray, 15));
 
+// Map method
+const twoSumMap = (arr, target) => {
+  let map = new Map()
+  for(let i=0; i<arr.length; i++) {
+    const complement = target - arr[i];
+    if(map.has(complement)) {
+      return [map.has(complement, i)]
+    }
+    map.set(arr[i], i)
+  }
+  return []
+}
+
 //Given an array of Student names, and a student.
 //Find the student name within that array of students.
 
